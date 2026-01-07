@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTyper Z - Ultimate Typing Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <section id="menu-screen" class="screen active">
+        <nav class="main-nav">
+            <ul>
+                <li><button class="nav-item active" data-target="home">Beranda</button></li>
+                <li><button id="btn-nav-test-v2" class="nav-item" data-target="test-main">Tes</button></li>
+                <li><button class="nav-item" data-target="how-to">Cara Main</button></li>
+                <li><button class="nav-item" data-target="tips">Tips</button></li>
+                <li><button class="nav-item" data-target="features">Fitur</button></li>
+                <li><button class="nav-item" data-target="faq">FAQ</button></li>
+                <li><button class="nav-item" data-target="about">Tentang</button></li>
+            </ul>
+        </nav>
+        <div class="menu-content">
+            <div class="brand-hero">
+                <div class="logo-wrapper">
+                    <i class='bx bx-keyboard logo-icon'></i>
+                </div>
+                <h1 class="hero-title">Speed<span class="gradient-text">Typer</span> <span class="version">Z</span></h1>
+                <p class="hero-subtitle">Uji batas kecepatan jarimu dalam antarmuka futuristik.</p>
+            </div>
+
+            <div class="menu-actions">
+                <button id="btn-play" class="primary-btn pulse-effect">
+                    <i class='bx bx-play'></i> MULAI TES
+                </button>
+                <button id="btn-reset-menu" class="text-btn danger">
+                    <i class='bx bx-trash'></i> Reset Data
+                </button>
+            </div>
+
+            <div class="menu-stats-preview">
+                <div class="stat-pill">
+                    <i class='bx bx-medal'></i> Terbaik: <span id="menu-best-wpm">0</span> WPM
+                </div>
+                <div class="stat-pill">
+                    <i class='bx bx-layer'></i> Level: <span id="menu-level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOME CONTENT SECTION -->
+        <main class="home-content">
+            <!-- Intro Section -->
+            <div class="content-section">
+                <h2><i class='bx bx-notepad'></i> Revolusi Latihan Mengetik</h2>
+                <p>
+                    SpeedTyper Z bukan sekadar alat tes kecepatan biasa. Kami menghadirkan sistem
+                    <strong>Multi-Kategori</strong> yang dirancang untuk mensimulasikan berbagai skenario dunia nyata:
+                    dari percakapan harian di kategori <strong>Normal</strong>, teks akademik dan teknis di kategori
+                    <strong>Advanced</strong>, hingga fleksibilitas total di kategori <strong>Custom</strong>.
+                </p>
+                <p>
+                    Tujuan akhirnya bukan hanya kecepatan, melainkan <strong>otomatisasi</strong>. Ketika jari Anda tahu
+                    letak tombol tanpa diperintah, otak Anda berhenti memikirkan "huruf" dan mulai memikirkan "konsep".
+                    Di situlah produktivitas melonjak drastis.
+                </p>
+            </div>
+
+            <!-- WPM Benchmarks -->
+            <div class="content-section">
+                <h2><i class='bx bx-tachometer'></i> Standar Kecepatan Mengetik</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class='bx bx-walk'></i>
+                        <h3>Pemula (0-30 WPM)</h3>
+                        <p>Tahap awal belajar. Biasanya masih mencari tombol satu per satu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class='bx bx-run'></i>
+                        <h3>Menengah (30-50 WPM)</h3>
+                        <p>Kecepatan rata-rata. Mulai hafal letak tombol tapi masih sering salah.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class='bx bx-rocket'></i>
+                        <h3>Pro (50+ WPM)</h3>
+                        <p>Tingkat profesional. Jari bergerak otomatis tanpa melihat keyboard.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technique Section -->
+            <div class="content-section">
+                <h2><i class='bx bx-fingerprint'></i> Teknik 10 Jari (Touch Typing)</h2>
+                <div class="section-image-wrapper">
+                    <img src="10jari.png" alt="Teknik 10 Jari" class="section-img">
+                </div>
+                <p>Kunci kecepatan adalah teknik <strong>10 Jari</strong>. Jangan gunakan metode "11 Jari" (hanya dua
+                    telunjuk).</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Posisi Home Row</h3>
+                        <p>Letakkan jari telunjuk kiri di tombol <strong>F</strong> dan kanan di tombol
+                            <strong>J</strong>.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Jangan Lihat Bawah</h3>
+                        <p>Paksa mata Anda tetap di layar. Otak Anda akan memetakan posisi tombol secara permanen.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Konsistensi</h3>
+                        <p>Berlatih 10 menit setiap hari jauh lebih efektif daripada 1 jam seminggu sekali.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="content-section">
+                <h2><i class='bx bx-star'></i> Fitur Unggulan SpeedTyper Z</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="f-icon-circle purple"><i class='bx bx-trending-up'></i></div>
+                        <h3>Sistem Level Progresif</h3>
+                        <p>Dapatkan XP untuk naik level dan buka tantangan WPM yang lebih tinggi secara otomatis.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon-circle blue"><i class='bx bx-code-alt'></i></div>
+                        <h3>Advanced & Coding</h3>
+                        <p>Kategori khusus untuk melatih kecepatan mengetik syntax koding dan istilah teknis kompleks.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon-circle cyan"><i class='bx bx-shield-quarter'></i></div>
+                        <h3>Privasi Total</h3>
+                        <p>Data progres tersimpan aman secara lokal di perangkat Anda tanpa perlu koneksi internet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon-circle red"><i class='bx bx-customize'></i></div>
+                        <h3>Custom Challenge</h3>
+                        <p>Gunakan teks buatan sendiri untuk melatih kemampuan mengetik materi spesifik Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="menu-footer">
+            <p class="credit">Created by <span class="author-name">Andre Zaenuddin</span></p>
+        </footer>
+    </section>
+
+    <!-- MODE SELECTION MODAL (NEW) -->
+    <div id="mode-selection-modal" class="modal-backdrop">
+        <div class="modal-content mode-selection-content wide">
+            <div class="modal-header">
+                <h2>Pilih Tantangan Anda</h2>
+                <button class="close-btn" id="btn-close-mode-sel"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="mode-cards">
+                <div class="mode-card" data-cat-link="normal">
+                    <div class="card-icon"><i class='bx bx-edit-alt'></i></div>
+                    <h3>Biasa</h3>
+                    <p>Kalimat harian yang santai untuk menguji kecepatan dasar Anda.</p>
+                    <span class="card-badge">Pemula</span>
+                </div>
+                <div class="mode-card" data-cat-link="advanced">
+                    <div class="card-icon"><i class='bx bx-rocket'></i></div>
+                    <h3>Lanjut</h3>
+                    <p>Teks akademik dan teknis yang menantang akurasi jari Anda.</p>
+                    <span class="card-badge">Pro</span>
+                </div>
+                <div class="mode-card" data-cat-link="custom">
+                    <div class="card-icon"><i class='bx bx-terminal'></i></div>
+                    <h3>Custom</h3>
+                    <p>Gunakan teks Anda sendiri untuk latihan yang lebih spesifik.</p>
+                    <span class="card-badge">Bebas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO MODAL -->
+    <div class="modal-backdrop" id="info-modal">
+        <div class="modal-content info-theme">
+            <div class="modal-header">
+                <h2 id="info-title">Info</h2>
+                <button class="close-btn" id="btn-close-info"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-body scrollable" id="info-body"></div>
+        </div>
+    </div>
+
+    <!-- GAMEPLAY SCREEN -->
+    <section id="game-screen" class="screen hidden">
+        <nav class="game-nav">
+            <div class="nav-left">
+                <span class="brand-small">SpeedTyper<span class="highlight">Z</span></span>
+            </div>
+            <div class="nav-right" style="display: flex; gap: 10px;">
+                <!-- Redundant Home button removed as requested -->
+            </div>
+        </nav>
+
+        <main class="game-container">
+            <!-- Stats Header -->
+            <div class="stats-header">
+                <div class="stat-card level-card">
+                    <span class="stat-label">Level</span>
+                    <span class="stat-value" id="game-level">1</span>
+                </div>
+                <div class="stat-card timer-card">
+                    <div class="timer-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="bg-ring" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress-ring" id="timer-ring" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <span class="timer-text" id="time-left">00</span>
+                    </div>
+                </div>
+                <div class="stat-card score-card">
+                    <span class="stat-label">WPM</span>
+                    <span class="stat-value highlight" id="wpm-display">0</span>
+                </div>
+            </div>
+
+            <!-- Mode Selector -->
+            <!-- Mode Selector -->
+            <div class="mode-selector-container">
+                <div class="category-tabs">
+                    <button class="cat-btn active" data-cat="normal">Biasa</button>
+                    <button class="cat-btn" data-cat="advanced">Lanjut</button>
+                    <button class="cat-btn" data-cat="custom">Custom</button>
+                </div>
+
+                <div class="difficulty-tabs-container">
+                    <button id="btn-back-menu-side" class="icon-btn side-home-btn" title="Menu Utama"><i
+                            class='bx bx-home-alt'></i></button>
+                    <div class="difficulty-tabs">
+                        <button class="tab-btn active" data-diff="easy">
+                            <span class="tab-icon">🌱</span> Easy
+                        </button>
+
+                        <div class="tab-wrapper disabled" id="tab-medium-wrapper">
+                            <button class="tab-btn" data-diff="medium" disabled>
+                                <span class="tab-icon">🔥</span> Medium
+                            </button>
+                            <div class="lock-tooltip"><i class='bx bx-lock-alt'></i> Lvl 2</div>
+                        </div>
+
+                        <div class="tab-wrapper disabled" id="tab-hard-wrapper">
+                            <button class="tab-btn" data-diff="hard" disabled>
+                                <span class="tab-icon">⚡</span> Hard
+                            </button>
+                            <div class="lock-tooltip"><i class='bx bx-lock-alt'></i> Lvl 3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing Area -->
+                <div class="typing-area glass-panel" id="typing-area">
+                    <div class="text-display" id="text-display">
+                        <!-- Text injected by JS -->
+                    </div>
+                    <div class="overlay-start" id="start-overlay">
+                        <button id="btn-start-overlay" class="start-btn-overlay">
+                            <i class='bx bx-pointer'></i> Mulai Mengetik
+                        </button>
+                    </div>
+                    <input type="text" id="input-field" class="hidden-input" autocomplete="off">
+                </div>
+
+                <!-- Live Accuracy -->
+                <div class="live-status">
+                    <div class="accuracy-bar-bg">
+                        <div class="accuracy-bar-fill" id="accuracy-bar" style="width: 100%;"></div>
+                    </div>
+                    <span class="accuracy-text" id="accuracy-text">100% Akurasi</span>
+                </div>
+
+                <div class="game-controls">
+                    <button id="btn-restart" class="secondary-btn"><i class='bx bx-refresh'></i> Ulangi</button>
+                </div> <!-- Close mode-selector-container -->
+            </div>
+        </main>
+    </section>
+
+    <!-- RESULTS MODAL -->
+    <div class="modal-backdrop" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Misi Selesai</h2>
+                <div class="rank-display" id="modal-rank">S</div>
+            </div>
+            <div class="modal-body">
+                <div class="primary-result">
+                    <div class="res-item">
+                        <span class="res-val" id="res-wpm">45</span>
+                        <span class="res-lbl">WPM</span>
+                    </div>
+                </div>
+                <div class="secondary-results">
+                    <div class="res-box">
+                        <i class='bx bx-target-lock'></i>
+                        <span id="res-acc">98%</span>
+                        <label>Akurasi</label>
+                    </div>
+                    <div class="res-box">
+                        <i class='bx bx-check-circle'></i>
+                        <span id="res-correct">120</span>
+                        <label>Benar</label>
+                    </div>
+                    <div class="res-box">
+                        <i class='bx bx-x-circle'></i>
+                        <span id="res-error">2</span>
+                        <label>Salah</label>
+                    </div>
+                </div>
+                <div class="level-msg" id="level-msg"></div>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-home-modal" class="outline-btn">Menu Utama</button>
+                <button id="btn-retry-modal" class="primary-btn">Main Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONFIRMATION MODAL -->
+    <div class="modal-backdrop" id="confirm-modal">
+        <div class="modal-content warning-theme">
+            <div class="modal-header">
+                <div class="warning-icon-wrapper">
+                    <i class='bx bx-error-circle'></i>
+                </div>
+                <h2>Hapus Data?</h2>
+            </div>
+            <div class="modal-body">
+                <p class="confirm-msg" style="color: var(--text-muted); margin-bottom: 20px;">
+                    Progress level, unlock mode, dan skor terbaik Anda akan dihapus secara permanen.
+                </p>
+            </div>
+            <div class="modal-actions">
+                <button id="btn-confirm-cancel" class="outline-btn">Batal</button>
+                <button id="btn-confirm-yes" class="primary-btn danger-btn">Hapus Semua</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM TEXT MODAL -->
+    <div class="modal-backdrop" id="custom-text-modal">
+        <div class="modal-content info-theme">
+            <div class="modal-header">
+                <h2><i class='bx bx-edit'></i> Custom Text</h2>
+                <button class="close-modal-btn" id="btn-close-custom"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-body">
+                <p style="color:var(--text-muted); margin-bottom:15px;">Paste teks yang ingin Anda ketik di bawah ini
+                    (Maks. 5000 karakter).</p>
+                <textarea id="custom-input-area" placeholder="Paste text here..." spellcheck="false"></textarea>
+                <div class="custom-controls">
+                    <button id="btn-start-custom" class="primary-btn"><i class='bx bx-play'></i> Mulai Custom
+                        Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE ZOOM OVERLAY -->
+    <div id="image-zoom-overlay" class="modal-backdrop zoom-overlay">
+        <div class="zoom-container">
+            <img id="zoomed-image" src="" alt="Zoomed view">
+            <div class="zoom-hint">Klik di mana saja untuk menutup</div>
+        </div>
+    </div>
+
+    <!-- SETTINGS / CUSTOMIZATION BUTTON -->
+    <button id="btn-settings-toggle" class="floating-settings-btn" title="Kustomisasi">
+        <i class='bx bx-palette'></i>
+    </button>
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal-backdrop" id="settings-modal">
+        <div class="modal-content settings-theme mini">
+            <div class="modal-header">
+                <h2><i class='bx bx-cog'></i> Kustomisasi</h2>
+                <button class="close-btn" id="btn-close-settings"><i class='bx bx-x'></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label class="setting-label"><i class='bx bx-volume-full'></i> Efek Suara (SFX)</label>
+                    <div class="toggle-wrapper">
+                        <span>Mechanical Click</span>
+                        <label class="switch">
+                            <input type="checkbox" id="check-sfx" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label"><i class='bx bx-paint'></i> Tema Warna</label>
+                    <div class="theme-grid">
+                        <button class="theme-opt active" data-theme="violet" style="background: #8b5cf6;"
+                            title="Neon Violet"></button>
+                        <button class="theme-opt" data-theme="blue" style="background: #3b82f6;"
+                            title="Cyber Blue"></button>
+                        <button class="theme-opt" data-theme="green" style="background: #10b981;"
+                            title="Matrix Green"></button>
+                        <button class="theme-opt" data-theme="orange" style="background: #f59e0b;"
+                            title="Electric Orange"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
